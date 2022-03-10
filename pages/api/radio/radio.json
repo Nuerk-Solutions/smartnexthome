@@ -1,0 +1,99 @@
+[
+  {
+    "id": "deutschlandfunk",
+    "name": "Deutschlandfunk",
+    "mp3": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3?aggregator=web",
+    "image": "https://cdn-radiotime-logos.tunein.com/s42828d.png",
+    "current_song": "https://streamtext.dradio.de/dlf.txt",
+    "color": "#198aff"
+  },
+  {
+    "id": "deutschlandfunk_kultur",
+    "name": "Deutschlandfunk Kultur",
+    "mp3": "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3?aggregator=web",
+    "image": "https://static.tuneyou.com/images/logos/500_500/4/1104/DeutschlandfunkKultur89.6FM.png",
+    "current_song": "https://streamtext.dradio.de/drk.txt",
+    "color": "#ff3608"
+  },
+  {
+    "id": "mdr_sachsen",
+    "name": "MDR Sachsen",
+    "mp3": "https://mdr-284280-0.sslcast.mdr.de/mdr/284280/0/mp3/high/stream.mp3",
+    "image": "https://cdn.mdr.de/administratives/av/bild218-resimage_v-variantSmall1x1_w-512.png?version=44740",
+    "current_song": "https://www.mdr.de/XML/titellisten/mdr1_sn_2.json",
+    "color": "#77b92a"
+  },
+  {
+    "id": "mdr_jump",
+    "name": "MDR Jump",
+    "mp3": "https://mdr-284320-0.sslcast.mdr.de/mdr/284320/0/mp3/high/stream.mp3",
+    "image": "https://cdn.jumpradio.de/musik/channel/livechannel-100-resimage_v-variantSmall1x1_w-512.jpg",
+    "current_song": "https://www.mdr.de/scripts4/titellisten/xmlresp-index.do?output=json&protocol=1&idwelle=1&amount=1",
+    "color": "#00bc8c"
+  },
+  {
+    "id": "nrj_sachsen",
+    "name": "NRJ Sachsen",
+    "mp3": "https://scdn.nrjaudio.fm/adwz1/de/33013/mp3_128.mp3",
+    "image": "https://api.nrjnet.de/assets/images/cache/img_filter__200x200/assets/images/streams/energy/ENERGY_Station_Sachsen.png",
+    "current_song": "https://api.nrjnet.de/webradio/energy/current/sachsen.json",
+    "color": "#db0a17"
+  },
+  {
+    "id": "radio_dresden",
+    "name": "Radio Dresden",
+    "mp3": "https://streams.bcs-systems.de/slp/live/dresden/mp3/radioplayer/web",
+    "image": "https://webradio.radiodresden.de/local/FB_Livestream_300x300.png",
+    "current_song": "https://webradio.radiodresden.de/Station_ALL_Current.json",
+    "color": "#0057a5"
+  },
+  {
+    "id": "radio_dresden_2",
+    "name": "Radio Dresden 2",
+    "mp3": "https://streams.bcs-systems.de/slp/zwei/dresden/mp3/radioplayer/web",
+    "image": "https://webradio.radiodresden.de/local/FB_Zwei_300x300.png",
+    "current_song": "https://webradio.radiodresden.de/Station_ALL_Current.json",
+    "color": "#23b1eb"
+  },
+  {
+    "id": "freitag_nacht",
+    "name": "Freitag Nacht",
+    "mp3": "https://streams.bcs-systems.de/slp/freitagnacht/dresden/mp3/radioplayer/web",
+    "image": "https://webradio.radiodresden.de/local/FB_FreitagNacht_300x300.png",
+    "current_song": "https://webradio.radiodresden.de/Station_ALL_Current.json",
+    "color": "#004f9f"
+  },
+  {
+    "id": "weihnachtsradio",
+    "name": "Weihnachtsradio",
+    "mp3": "https://streams.bcs-systems.de/slp/xmas/dresden/mp3/radioplayer/web",
+    "image": "https://webradio.radiodresden.de/local/FB_Weihnachtsradio_300x300.png",
+    "current_song": "https://webradio.radiodresden.de/Station_ALL_Current.json",
+    "color": "#004f9f"
+  },
+  {
+    "id": "radio_psr",
+    "name": "Radio PSR",
+    "mp3": "https://streams.radiopsr.de/psr-live/mp3-192/mediaplayer",
+    "image": "https://i1.sndcdn.com/artworks-000141272914-y2s36e-t500x500.jpg",
+    "current_song": "https://iris-psr.loverad.io/flow.json?station=7&offset=1&count=1",
+    "color": "#45c080"
+  },
+  {
+    "id": "radio_rsa",
+    "name": "Radio RSA",
+    "mp3": "https://streams.rsa-sachsen.de/rsa-live/mp3-192/mediaplayerrsa",
+    "image": "https://www.radio.de/images/broadcasts/4a/e6/2228/1/c300.png",
+    "current_song": "https://iris-rsa.loverad.io/flow.json?station=8&offset=1&count=1",
+    "color": "#6ab7e4"
+  },
+  {
+    "id": "sunshine_live",
+    "name": "SUNSHINE LIVE",
+    "mp3": "https://stream.sunshine-live.de/live/mp3-192/mediaplayer",
+    "image": "https://images.sunshine-live.de/files/streams/stream-tile-ssl-SUNSHINELIVEv2.jpg",
+    "current_song": "https://iris-sunshinelive.loverad.io/flow.json?station=3&offset=1&count=1",
+    "color": "#2f4d62"
+  }
+]
+
