@@ -24,10 +24,10 @@ export default function SearchComponent(props) {
                 </div>
                 <input
                     style={{
-                        // backgroundColor: `${theme === 'dark' ? '#3a3a3a' : '#e2e8f0'}`,
+                        backgroundColor: `${theme === 'dark' ? '#3a3a3a' : '#e2e8f0'}`,
                         letterSpacing: '0.05em',
                     }}
-                    className={`bg-${theme} data-hj-whitelist block appearance-none w-full border-none rounded-full shadow py-3 pl-12 pr-6 mb-3 leading-tight focus:outline-none focus:bg-gray-200 truncate placeholder-gray-500 text-${colorTheme}`}
+                    className={`data-hj-whitelist block appearance-none w-full border-none rounded-full shadow py-3 pl-12 pr-6 mb-3 leading-tight focus:outline-none focus:bg-gray-200 truncate placeholder-gray-500 text-${colorTheme}`}
                     id="grid-first-name"
                     type="text"
                     placeholder="Stadtname oder PLZ eingeben"

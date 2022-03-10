@@ -14,7 +14,6 @@ const ThemeContextProvider = ({children}) => {
     const toggleTheme = () => {
         const selectedTheme = theme === 'light' ? 'dark' : 'light'
         setTheme(selectedTheme)
-        console.log('toggleTheme not implemented')
         saveThemePreference(selectedTheme)
     }
 

@@ -104,7 +104,10 @@ export default function WeatherForecastContainer({weatherCurrent, weatherForecas
                         <div className="text-center pb-5">
                             <p>
                                 <button
-                                    className={`bg-${colorTheme} text-${theme} font-semibold mt-6 py-3 px-6 rounded-full capitalize`}
+                                    className={`text-${theme} font-semibold mt-6 py-3 px-6 rounded-full capitalize`}
+                                    style={{
+                                        backgroundColor: theme === 'dark' ? '#292929' : '#e8ebee',
+                                    }}
                                     onClick={toggleWeatherAlerts}>
                                     Wetter Warnungen {showAlerts ? 'verstecken' : 'anzeigen'}
                                 </button>

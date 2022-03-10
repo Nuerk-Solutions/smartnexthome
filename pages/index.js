@@ -11,7 +11,10 @@ export default function Home() {
     const {theme} = useContext(ThemeContext)
     return (
         <div>
-            <div className={`bg-${theme} tracking-wider border-box wrapper`}>
+            <div className={`tracking-wider border-box wrapper`}
+                 style={{
+                     backgroundColor: theme === 'dark' ? '#292929' : '#e8ebee',
+                 }}>
                 <div>
                     {/*{!params.get("key") && <HeaderComponent/>}*/}
                     <HeaderComponent/>

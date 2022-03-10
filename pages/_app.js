@@ -13,11 +13,11 @@ function SafeHydrate({children}) {
 
 function MyApp({Component, pageProps}) {
     return (
-        <SafeHydrate>
+        // <SafeHydrate>
             <ThemeContextProvider>
                 <Component {...pageProps} />
             </ThemeContextProvider>
-        </SafeHydrate>
+        // </SafeHydrate>
     );
 }
 

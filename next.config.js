@@ -2,6 +2,7 @@
 const path = require('path')
 
 const nextConfig = {
+    generateEtags: false,
     reactStrictMode: true,
     api: {
         externalResolver: true,

@@ -8,9 +8,12 @@ export default function AddressComponent({address, selectedAddressIndex, index, 
         <p
             className={`px-5 py-1 cursor-pointer item hover:text-${theme} hover:bg-${colorTheme} ${
                 index === selectedAddressIndex
-                    ? `text-${theme} bg-${colorTheme}`
+                    ? `text-${theme}`
                     : `text-${colorTheme}`
             }`}
+            style={{
+                backgroundColor: theme === 'dark' ? '#292929' : '#e8ebee',
+            }}
             onClick={addressSelected}>
             {address.cityName}
         </p>

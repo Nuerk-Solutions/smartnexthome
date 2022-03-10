@@ -126,7 +126,10 @@ export default function FavoritesContainer() {
     return (
         <Fragment>
             {favorites.length > 0 ? (
-                <div className={`bg-${theme} pt-5 pb-24 mb-0`}>
+                <div className={`pt-5 pb-24 mb-0`}
+                     style={{
+                         backgroundColor: theme === 'dark' ? '#292929' : '#e8ebee',
+                     }}>
                     <p className={`text-center font-bold text-2xl text-${colorTheme}`}>
                         Favoriten
                     </p>

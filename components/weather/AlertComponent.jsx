@@ -13,7 +13,10 @@ export default function AlertComponent({alert}) {
         <div className={'flex flex-col justify-center items-center'}>
             <div className={`w-11/12 lg:w-3/4 xl:max-w-5xl`}>
                 <div
-                    className={`bg-${theme} border-t-4 border border-red-700 rounded-lg text-${colorTheme} px-3 py-3 shadow-xl`}
+                    className={`border-t-4 border border-red-700 rounded-lg text-${colorTheme} px-3 py-3 shadow-xl`}
+                    style={{
+                        backgroundColor: theme === 'dark' ? '#292929' : '#e8ebee',
+                    }}
                     role="alert">
                     <div className="flex">
                         <div className="pt-1 px-2">
