@@ -38,7 +38,7 @@ export default function AudioControls({
                 {src: radioImage, sizes: '512x512', type: 'image/png'},
             ],
         })
-    }, [onPlayPauseClick]);
+    }, [title, onPlayPauseClick]);
 
     return (
         <div className="grid place-items-center">
