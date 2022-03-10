@@ -1,8 +1,9 @@
 import React, {useContext, useEffect, useState} from 'react'
-import {ThemeContext} from '../../../components/context/ThemeContext';
+import {ThemeContext} from '../../context/ThemeContext';
 
 export default function FooterComponent() {
     const {theme, colorTheme} = useContext(ThemeContext)
+    const [textColor, setTextColor] = useState('dark')
     const [date, setDate] = useState(new Date());
 
     useEffect(() => {
@@ -11,9 +12,11 @@ export default function FooterComponent() {
 
     }, [date]);
 
+    useEffect(() => setTextColor(colorTheme), [date, theme, colorTheme]);
+
     return (
         <div
-            className={`text-${colorTheme} pb-3`}
+            className={`text-${textColor} pb-3`}
             style={{
                 backgroundColor: theme === 'dark' ? '#292929' : '#e8ebee',
             }}>

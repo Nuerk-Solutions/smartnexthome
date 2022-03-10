@@ -4,7 +4,7 @@ import AudioControls from '../audioControls/AudioControls';
 import Backdrop from '../backdrop/Backdrop';
 import axois from 'axios';
 import Ticker from 'react-ticker';
-import {ThemeContext} from '../../../components/context/ThemeContext';
+import {ThemeContext} from '../../../context/ThemeContext';
 
 export default function ChannelItem({
                                         id,

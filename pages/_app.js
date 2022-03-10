@@ -1,12 +1,23 @@
 import '../styles/globals.scss'
 import '../styles/sass/styles.scss'
-import {ThemeContextProvider} from '../components/context/ThemeContext';
+import {ThemeContextProvider} from '../context/ThemeContext';
+
+function SafeHydrate({children}) {
+    return (
+        <div suppressHydrationWarning>
+            {typeof window === 'undefined' ? null : children}
+        </div>
+    )
+}
+
 
 function MyApp({Component, pageProps}) {
     return (
-        <ThemeContextProvider>
-            <Component {...pageProps} />
-        </ThemeContextProvider>
+        <SafeHydrate>
+            <ThemeContextProvider>
+                <Component {...pageProps} />
+            </ThemeContextProvider>
+        </SafeHydrate>
     );
 }
 

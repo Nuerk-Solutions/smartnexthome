@@ -1,11 +1,11 @@
 import React, {Fragment, Suspense, useContext, useEffect, useState} from 'react';
 import ChannelItem from './channelItem/ChannelItem';
 import axois from 'axios';
-import LoaderComponent from './loader/LoaderComponent';
-import ErrorComponent from './error/ErrorComponent';
-import FooterComponent from './FooterComponent/FooterComponent';
-import HeaderComponent from './HeaderComponent/HeaderComponent';
-import {ThemeContext} from '../../components/context/ThemeContext';
+import {ThemeContext} from '../../context/ThemeContext';
+import LoaderComponent from '../../components/loader/LoaderComponent';
+import ErrorComponent from '../../components/error/ErrorComponent';
+import HeaderComponent from '../../components/header/HeaderComponent';
+import FooterComponent from '../../components/footer/FooterComponent';
 
 export default function Radio() {
 

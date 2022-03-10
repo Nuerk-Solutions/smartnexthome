@@ -3,7 +3,7 @@ import Toggle from 'react-toggle'
 import style from './HeaderComponent.module.css'
 import IconComponent from '../icon/IconComponent'
 import {isEmpty} from 'lodash-es'
-import {ThemeContext} from '../../../components/context/ThemeContext';
+import {ThemeContext} from '../../context/ThemeContext';
 import {TiWeatherCloudy} from '@react-icons/all-files/ti/TiWeatherCloudy';
 import {MdRadio} from '@react-icons/all-files/md/MdRadio';
 

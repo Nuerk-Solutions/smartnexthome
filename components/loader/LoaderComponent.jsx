@@ -1,14 +1,14 @@
 import React, {useContext} from 'react'
 import style from './LoaderComponent.module.scss'
-import {ThemeContext} from '../../../components/context/ThemeContext';
+import {ThemeContext} from '../../context/ThemeContext';
 
 export default function LoaderComponent({loaderText}) {
     const {theme} = useContext(ThemeContext)
     return (
         <div className="flex flex-col w-full justify-center items-center">
             <div className={style.spinner}>
-                <div className={style.doubleBounce1}></div>
-                <div className={style.doubleBounce2}></div>
+                <div className={style.double_bounce1}></div>
+                <div className={style.double_bounce2}></div>
             </div>
             {loaderText && (
                 <div
@@ -16,7 +16,7 @@ export default function LoaderComponent({loaderText}) {
                         theme === 'light' ? 'dark' : 'light'
                     }`}>
                     {loaderText}
-                    <span className={`text-2xl ${style.textFade}`}>...</span>
+                    <span className={`text-2xl ${style.text_fade}`}>...</span>
                 </div>
             )}
         </div>

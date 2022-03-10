@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import style from './ErrorComponent.module.scss'
-import {ThemeContext} from '../../../components/context/ThemeContext';
+import {ThemeContext} from '../../context/ThemeContext';
 
 export default function ErrorComponent(props) {
     const {theme} = useContext(ThemeContext)
@@ -16,7 +16,7 @@ export default function ErrorComponent(props) {
                     className="absolute top-0 bottom-0 right-0 ml-3 mr-1"
                     onClick={props.closeError}>
           <svg
-              className={`fill-current h-6 w-6 text-red-500 ${style.closeIcon}`}
+              className={`fill-current h-6 w-6 text-red-500 ${style.close_Icon}`}
               role="button"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20">
