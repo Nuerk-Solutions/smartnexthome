@@ -4,7 +4,6 @@ import style from './HeaderComponent.module.css'
 import IconComponent from '../icon/IconComponent'
 import {isEmpty} from 'lodash-es'
 import {ThemeContext} from '../../context/ThemeContext';
-import {TiWeatherCloudy} from '@react-icons/all-files/ti/TiWeatherCloudy';
 import {MdRadio} from '@react-icons/all-files/md/MdRadio';
 
 export default function HeaderComponent() {
@@ -13,7 +12,7 @@ export default function HeaderComponent() {
     return (
         // <div className='flex justify-end items-center px-10 py-5'>
         <Navbar>
-            <NavItem icon={<TiWeatherCloudy/>} destinationPath="/"/>
+            {/*<NavItem icon={<TiWeatherCloudy/>} destinationPath="/"/>*/}
             {/*<NavItem icon={<GiBusStop/>} destinationPath="/dvb"/>*/}
             {/*<NavItem icon={<GiOilPump/>} destinationPath="/pump"/>*/}
             <NavItem icon={<MdRadio/>} destinationPath="/radio"/>
