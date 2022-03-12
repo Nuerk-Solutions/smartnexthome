@@ -1,12 +1,14 @@
 import React, {Fragment, useContext, useEffect, useState} from 'react'
 import {AddressContext} from '../../context/AddressContext'
 import FetchWeatherData from '../../utils/FetchWeatherData'
-import WeatherForecastContainer from '../weather-forecast/WeatherForecastContainer'
 import {isNil} from 'lodash-es'
 import ErrorBoundaryContainer from '../error-boundary/ErrorBoundaryContainer';
 import LoaderComponent from '../../components/loader/LoaderComponent';
 import ErrorComponent from '../../components/error/ErrorComponent';
 import isValid from '../../utils/ValidityChecker';
+import dynamic from 'next/dynamic';
+
+const WeatherForecastContainer = dynamic(() => import('../weather-forecast/WeatherForecastContainer'), {ssr: false});
 
 export default function WeatherContainer() {
     const addressContext = useContext(AddressContext)

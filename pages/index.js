@@ -1,11 +1,11 @@
 import HeaderComponent from '../components/header/HeaderComponent';
-import FooterComponent from '../components/footer/FooterComponent';
 import {ThemeContext} from '../context/ThemeContext';
 import {useContext} from 'react';
 // import HomeContainer from '../containers/home/HomeContainer';
 import dynamic from 'next/dynamic';
 // import HomeContainer from '../containers/home/HomeContainer';
 const HomeContainer = dynamic(() => import('../containers/home/HomeContainer'), {ssr: false});
+const FooterComponent = dynamic(() => import('../components/footer/FooterComponent'), {ssr: false});
 
 export default function Home() {
     const {theme} = useContext(ThemeContext)
