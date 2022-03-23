@@ -42,7 +42,7 @@
 				<key>dateExpires</key>
 				<string>29.12.22</string>
 				<key>name</key>
-				<string>iOS Team Store Provisioning Profile: de.Thomas.Logbook</string>
+				<string>iOS Team Ad Hoc Provisioning Profile: de.Thomas.Logbook</string>
 			</dict>
 			<key>symbols</key>
 			<true/>
