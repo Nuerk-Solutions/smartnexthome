@@ -2,28 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>compileBitcode</key>
-	<true/>
 	<key>destination</key>
-	<string>export</string>
-	<key>manifest</key>
-	<dict>
-		<key>appURL</key>
-		<string>https://smartnexthome.vercel.app/logbook/Logbook.ipa</string>
-		<key>displayImageURL</key>
-		<string>https://web.nuerk-solutions.de/dl/FINAL/image.57x57.png</string>
-		<key>fullSizeImageURL</key>
-		<string>https://web.nuerk-solutions.de/dl/FINAL/image.512x512.png</string>
-	</dict>
+	<string>upload</string>
+	<key>manageAppVersionAndBuildNumber</key>
+	<true/>
 	<key>method</key>
-	<string>ad-hoc</string>
+	<string>app-store</string>
 	<key>signingStyle</key>
 	<string>automatic</string>
 	<key>stripSwiftSymbols</key>
 	<true/>
 	<key>teamID</key>
 	<string>3JWUJEGD2M</string>
-	<key>thinning</key>
-	<string>&lt;none&gt;</string>
+	<key>uploadBitcode</key>
+	<true/>
+	<key>uploadSymbols</key>
+	<true/>
 </dict>
 </plist>

@@ -9,8 +9,10 @@
 			<array>
 				<string>arm64</string>
 			</array>
+			<key>bitcode</key>
+			<true/>
 			<key>buildNumber</key>
-			<string>12</string>
+			<string>19</string>
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
@@ -24,6 +26,8 @@
 			<dict>
 				<key>application-identifier</key>
 				<string>3JWUJEGD2M.de.Thomas.Logbook</string>
+				<key>beta-reports-active</key>
+				<true/>
 				<key>com.apple.developer.team-identifier</key>
 				<string>3JWUJEGD2M</string>
 				<key>get-task-allow</key>
@@ -34,18 +38,20 @@
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>45bb3f24-7c3d-4122-8cc1-67b08baa9445</string>
+				<string>2d11abae-09ee-4c14-ba13-aba73bf90a2f</string>
 				<key>dateExpires</key>
 				<string>29.12.22</string>
 				<key>name</key>
-				<string>iOS Team Ad Hoc Provisioning Profile: de.Thomas.Logbook</string>
+				<string>iOS Team Store Provisioning Profile: de.Thomas.Logbook</string>
 			</dict>
+			<key>symbols</key>
+			<true/>
 			<key>team</key>
 			<dict>
 				<key>id</key>
 				<string>3JWUJEGD2M</string>
 				<key>name</key>
-				<string>Thomas Nrk</string>
+				<string>Thomas Nürk</string>
 			</dict>
 			<key>versionNumber</key>
 			<string>1.0</string>
