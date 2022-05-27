@@ -3,25 +3,27 @@ import AudioControls from '../audioControls/AudioControls';
 // import style from './ChannelItem.module.css';
 import Backdrop from '../backdrop/Backdrop';
 import axois from 'axios';
+import Image from 'next/image'
 import Ticker from 'react-ticker';
 import {ThemeContext} from '../../../context/ThemeContext';
 
 export default function ChannelItem({
+                                        index,
+                                        selected,
                                         id,
                                         radioName,
                                         radioImage,
                                         color,
                                         mp3,
-                                        currentlyPlay,
                                         onClick,
                                         style
                                     }) {
 
     const {theme, colorTheme} = useContext(ThemeContext);
-    const [isPlaying, setIsPlaying] = useState(false);
     const [seconds, setSeconds] = useState(-1);
     const [publicTitle, publicTitleSet] = useState('Loading...');
     const [fontColor, setFontColor] = useState('text-light');
+    // const [isActive, setIsActive] = useState(false);
     let refreshDelay = 31 * 10; //30 seconds
 
 
@@ -38,7 +40,6 @@ export default function ChannelItem({
                 publicTitleSet(res.data);
             });
         }
-
 
         useEffect(() => {
             fetchData();
@@ -70,19 +71,13 @@ export default function ChannelItem({
         <div
             className={`${fontColor} relative z-0 max-h-96 w-full md:max-w-sm px-6 pt-5 pb-5 border-0 shadow-lg rounded-2xl mt-5 mb-5 cursor-pointer ` + style}
             style={{
-                background: (isPlaying ? color : `linear-gradient(180deg, ${color}, #000000)`),
-            }}
-
-            onClick={(e) => {
-                if (e.target.type === 'range') return;
-                setIsPlaying(!isPlaying);
-                onClick(e);
+                background: (selected ? color : `linear-gradient(180deg, ${color}, #000000)`),
             }}>
 
             {/*Image*/}
             <div className={'grid place-items-center'}>
                 <div className="w-40 h-40 bg-gray-200 rounded-2xl shadow-lg">
-                    <img className={'rounded-2xl shadow-lg'} id={`img-${radioImage}`} src={radioImage} alt={'No Img'}/>
+                    <Image className={'rounded-2xl shadow-lg'} id={`img-${radioImage}`} src={radioImage} alt={'No Img'} width={160} height={160}/>
                 </div>
             </div>
 
@@ -97,11 +92,10 @@ export default function ChannelItem({
             </div>
 
             {/*Audio Controls*/}
-            <AudioControls isPlaying={currentlyPlay} onPlayPauseClick={setIsPlaying} radioName={radioName}
-                           radioImage={radioImage} title={publicTitle} mp3={mp3}/>
+            <AudioControls onClick={onClick} setPlaying={selected} radioName={radioName} radioImage={radioImage} title={publicTitle} mp3={mp3}/>
 
             {/*Backdrop*/}
-            <Backdrop activeColor={color} isPlaying={currentlyPlay}/>
+            <Backdrop activeColor={color} isPlaying={selected}/>
         </div>
     );
 }

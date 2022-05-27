@@ -1,19 +1,20 @@
-import React, {Fragment, Suspense, useContext, useEffect, useState} from 'react';
-import ChannelItem from './channelItem/ChannelItem';
+import React, {Suspense, useContext, useEffect, useState} from 'react';
 import axois from 'axios';
 import {ThemeContext} from '../../context/ThemeContext';
 import LoaderComponent from '../../components/loader/LoaderComponent';
 import ErrorComponent from '../../components/error/ErrorComponent';
 import HeaderComponent from '../../components/header/HeaderComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
+import dynamic from 'next/dynamic';
+
+const ChannelItem = dynamic(() => import('./channelItem/ChannelItem'), {ssr: false});
 
 export default function Radio() {
 
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [json, setJson] = useState([]);
-    const [channelIndexPlaying, setChannelIndexPlaying] = useState(-1);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [selectedRadioIndex, setSelectedRadioIndex] = useState(-1);
     const {theme} = useContext(ThemeContext)
 
     useEffect(() => {
@@ -49,13 +50,13 @@ export default function Radio() {
         );
     } else
         return (
-            <Fragment>
-                <div className={`bg-${theme} tracking-wider border-box`}>
-                    <div>
-                        {/*{!params.get("key") && <HeaderComponent/>}*/}
-                        <HeaderComponent/>
-                    </div>
+            <div className={'w-full min-h-screen grid relative'}>
+                {/*<div className={`bg-${theme}`}>*/}
+                <div>
+                    {/*{!params.get("key") && <HeaderComponent/>}*/}
+                    <HeaderComponent/>
                 </div>
+                {/*</div>*/}
                 <div>
                     <Suspense
                         fallback={
@@ -67,19 +68,22 @@ export default function Radio() {
                                     return (
                                         <ChannelItem
                                             key={index}
+                                            index={index}
                                             id={item.id}
                                             radioName={item.name}
                                             radioImage={item.image}
                                             color={item.color}
                                             mp3={item.mp3}
-                                            currentlyPlay={channelIndexPlaying === index && channelIndexPlaying !== -1}
-                                            style={`${channelIndexPlaying !== -1 && channelIndexPlaying !== index ? 'opacity-50' : ''}`}
-                                            onClick={() => {
-                                                if (channelIndexPlaying === index) {
-                                                    setChannelIndexPlaying(-1)
+                                            style={`${selectedRadioIndex !== -1 && selectedRadioIndex !== index ? 'opacity-50' : ''}`}
+                                            selected={selectedRadioIndex === index}
+                                            onClick={(event, force) => {
+                                                // console.log(selectedRadioIndex, index)
+                                                console.log(force);
+                                                if (selectedRadioIndex === index || force) {
+                                                    setSelectedRadioIndex(-1);
                                                     return;
                                                 }
-                                                setChannelIndexPlaying(index);
+                                                setSelectedRadioIndex(index);
                                             }}
                                         />
                                     );
@@ -92,6 +96,6 @@ export default function Radio() {
                 <div>
                     <FooterComponent/>
                 </div>
-            </Fragment>
+            </div>
         );
 }

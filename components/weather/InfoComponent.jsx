@@ -1,5 +1,4 @@
 import React, {Fragment, useContext, useEffect, useRef, useState} from 'react'
-import {isEmpty, isUndefined} from 'lodash-es'
 import moment from 'moment-timezone'
 import {AddressContext} from '../../context/AddressContext';
 import {FaRegHeart} from '@react-icons/all-files/fa/FaRegHeart';

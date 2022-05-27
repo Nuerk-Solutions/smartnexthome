@@ -11,7 +11,7 @@ export default function Home() {
     const {theme} = useContext(ThemeContext)
     return (
         <div>
-            <div className={`tracking-wider border-box wrapper`}
+            <div className={'w-full min-h-screen grid relative'}
                  style={{
                      backgroundColor: theme === 'dark' ? '#292929' : '#e8ebee',
                  }}>
