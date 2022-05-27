@@ -10,7 +10,7 @@
 				<string>arm64</string>
 			</array>
 			<key>buildNumber</key>
-			<string>12</string>
+			<string>18</string>
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
@@ -45,7 +45,7 @@
 				<key>id</key>
 				<string>3JWUJEGD2M</string>
 				<key>name</key>
-				<string>Thomas Nrk</string>
+				<string>Thomas Nürk</string>
 			</dict>
 			<key>versionNumber</key>
 			<string>1.0</string>
