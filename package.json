@@ -13,7 +13,7 @@
     "axios": "^0.26.1",
     "axios-retry": "^3.2.4",
     "lodash-es": "^4.17.21",
-    "moment-timezone": "^0.5.34",
+    "moment-timezone": "^0.5.35",
     "next": "12.1.0",
     "next-transpile-modules": "^9.0.0",
     "nuka-carousel": "^4.8.4",
